@@ -42,3 +42,7 @@ export function checkToken() {
   return usersAPI.checkToken()
   .then(dateStr => new Date(dateStr));
 }
+
+// import { useNavigate } from 'react-router-dom';
+// const navigate = useNavigate();
+// navigate(‘/‘yourroutehere);

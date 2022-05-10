@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import { getUser } from '../../utilities/users-service';
@@ -11,9 +11,28 @@ import Favorites from '../FavoritesPage/favorites';
 import Library from '../LibraryPage/library';
 import Player from '../PlayerPage/player';
 import Trending from '../TrendingPage/trending';
+import SpotifyLogin from '../SpotifyLoginPage/SpotifyLoginPage';
+import { setClientToken } from '../../spotify';
 export default function App() {
   const [user, setUser] = useState(getUser());
+  const [token2, setToken2] = useState("");
+  useEffect(() => {
+    const token2 = window.localStorage.getItem("token2");
+    const hash = window.location.hash;
+    window.location.hash = "";
+    if(!token2 && hash){
+      const _token = hash.split("&")[0].split("=")[1];
+      window.localStorage.setItem("token2", _token);
+      setToken2(_token)
+      setClientToken(_token)
+    } else {
+      setToken2(token2);
+      setClientToken(token2)
+    }
+  }, []);
   return (
+      !token2 ? (<SpotifyLogin />
+      ):
     <main className="App">
       { user ?
         <>
