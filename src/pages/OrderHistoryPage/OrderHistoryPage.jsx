@@ -11,8 +11,11 @@ export default function OrderHistoryPage() {
 
   return (
     <>
+    <div className='screen-container'>
+
       <h1>OrderHistoryPage</h1>
       <button onClick={handleCheckToken}>Check When My Login Expires</button>
+    </div>
     </>
   );
 }

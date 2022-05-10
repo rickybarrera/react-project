@@ -21,6 +21,11 @@ const userSchema = new Schema ({
         minLength: 3,
         required: true 
     },
+    spotifyToken: String,
+  spotifyRefresh: String,
+  tokenExpiration: Number,
+  spotifyId: String,
+  topTracks: Array,
 }, {
     timestamps: true,
     toJSON: {
