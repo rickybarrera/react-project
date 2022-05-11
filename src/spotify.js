@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 const authEndpoint = "https://accounts.spotify.com/authorize?";
 const clientId = '6419bfc7571344ab99d374796b9619a6';
