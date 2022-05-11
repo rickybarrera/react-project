@@ -3,7 +3,7 @@ import APIKit from '../../spotify';
 import './library.css';
 import { IconContext } from "react-icons";
 import { AiFillPlayCircle } from "react-icons/ai";
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 export default function Library() {
 const [playlists, setPlaylists] = useState(null);
 
@@ -16,7 +16,7 @@ useEffect(() => {
 const navigate = useNavigate();
 
 const playPlaylist = (id) => {
-    Navigate('/player', { state: { id: id }});
+    navigate('/player', { state: { id: id }});
 };
   return (
     <div className='screen-container'>
