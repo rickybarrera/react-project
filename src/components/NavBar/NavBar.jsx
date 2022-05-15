@@ -5,7 +5,7 @@ import NavBarButton from './NavBarButton';
 import { MdFavorite } from "react-icons/md";
 import { FaGripfire, FaPlay } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
-import { MdSpaceDashboard } from "react-icons/md";
+// import { MdSpaceDashboard } from "react-icons/md";
 export default function NavBar({user, setUser}) {
 
     function handleLogOut(){

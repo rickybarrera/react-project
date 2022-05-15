@@ -6,7 +6,6 @@ import AudioPLayer from "../../components/AudioPlayer/AudioPlayer";
 import SongCard from "../../components/SongCard/SongCard";
 import Queue from "../../components/Queue/Queue";
 
-import Controls from "../../components/AudioPlayer/Controls";
 
 export default function Player() {
   const location = useLocation();
@@ -38,7 +37,7 @@ export default function Player() {
           currentIndex={currentIndex}
           setCurrentIndex={setCurrentIndex}
         />
-     {/* <Controls artistID={currentTrack?.album?.artists[0]?.id} /> */}
+     
       </div>
       <div className="right-player-body">
         <SongCard album={currentTrack?.album} />
