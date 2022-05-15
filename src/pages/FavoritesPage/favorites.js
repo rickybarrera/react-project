@@ -22,7 +22,7 @@ const playTrack = (id) => {
     <div className='screen-container'>
     <div className='favorites-body'>
         {tracks.map((track) => (
-            <div className='track-card' key={track.track.id} onClick={() => playTrack(track.track.id)}>
+            <div className='track-card' key={track.track.id}>
                  <img src={track.track.album.images[0].url}
         className="track-image"
         alt="track-Art"></img>
@@ -31,9 +31,9 @@ const playTrack = (id) => {
         <p className='track-title'> {track.track.name} </p>
         <p className='track-subtitle'> By: {track.track.artists[0].name}  </p>
         <div className="track-fade">
-              <IconContext.Provider value={{ size: "50px", color: "#E99D72" }}>
+              {/* <IconContext.Provider value={{ size: "50px", color: "#E99D72" }}>
                 <AiFillPlayCircle />
-              </IconContext.Provider>
+              </IconContext.Provider> */}
 
         </div>
 </div>
