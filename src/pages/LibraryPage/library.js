@@ -9,6 +9,7 @@ const [playlists, setPlaylists] = useState(null);
 
 useEffect(() => {
     APIKit.get('me/playlists').then(function (response){
+        console.log(response.data);
         setPlaylists(response.data.items);
     });
 }, []);

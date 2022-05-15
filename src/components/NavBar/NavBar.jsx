@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+
 import * as userService from '../../utilities/users-service';
 import './NavBar.css';
 import NavBarButton from './NavBarButton';
@@ -17,8 +17,8 @@ export default function NavBar({user, setUser}) {
 
         <nav>
         <span> Welcome, {user.name} </span>
-        <NavBarButton title="Feed" to="/feed" icon={<MdSpaceDashboard />} />
-        <NavBarButton title="Trending" to="/trending" icon={<FaGripfire />} />
+        {/* <NavBarButton title="Feed" to="/feed" icon={<MdSpaceDashboard />} /> */}
+        {/* <NavBarButton title="Trending" to="/trending" icon={<FaGripfire />} /> */}
         <NavBarButton title="Player" to="/player" icon={<FaPlay />} />
         <NavBarButton
           title="Favorites"
